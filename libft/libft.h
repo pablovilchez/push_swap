@@ -6,7 +6,7 @@
 /*   By: pvilchez <pvilchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 23:57:25 by pvilchez          #+#    #+#             */
-/*   Updated: 2023/06/07 23:46:31 by pvilchez         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:24:44 by pvilchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,17 @@
 # include <unistd.h>
 # include <stdarg.h>
 
+// Funciones del bonus de libft
+typedef struct s_node
+{
+	int				num;
+	int				index;
+	int				pos;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
+	struct s_node	*next;
+}					t_node;
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t number, size_t size);
@@ -51,17 +62,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *src, unsigned int start, size_t len);
 int		ft_tolower(int ch);
 int		ft_toupper(int ch);
-// Funciones del bonus de libft
-typedef struct s_list
-{
-	int				num;
-	int				index;
-	int				pos;
-	int				target_pos;
-	int				cost_a;
-	int				cost_b;
-	struct s_list	*next;
-}					t_node;
 void	ft_lstadd_back(t_node **lst, t_node *new);
 void	ft_lstadd_front(t_node **lst, t_node *new);
 void	ft_lstclear(t_node **lst);
